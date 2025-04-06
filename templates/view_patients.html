@@ -1,0 +1,37 @@
+<!-- templates/view_patients.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Details</title>
+</head>
+
+<body>
+    <h2>Patient Details</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Username</th>
+            <th>Password (Hashed)</th>
+        </tr>
+        {% for pat in patients %}
+        <tr>
+            <td>{{ pat[0] }}</td>
+            <td>{{ pat[1] }}</td>
+            <td>{{ pat[2] }}</td>
+            <td>{{ pat[3] }}</td>
+            <td>{{ pat[4] }}</td>
+            <td>{{ pat[5] }}</td>
+            <td>{{ pat[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/admin/dashboard"><button>Back</button></a>
+</body>
+
+</html>
